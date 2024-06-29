@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Central - Changelog</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Roboto', sans-serif;
+            background-color: #202225;
+            color: #fff;
+            height: 100vh;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+        }
+        .navbar {
+            width: 100%;
+            background-color: #23272a;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 20px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+            position: fixed;
+            top: 0;
+            z-index: 1000;
+        }
+        .navbar .logo {
+            display: flex;
+            align-items: center;
+        }
+        .navbar .logo img {
+            height: 50px;
+            margin-right: 15px;
+        }
+        .navbar .links {
+            display: flex;
+            justify-content: center;
+            flex: 1;
+        }
+        .navbar .links a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: 500;
+            font-size: 1.1em;
+        }
+        .navbar .links a:hover {
+            text-decoration: underline;
+        }
+        .changelog-container {
+            padding-top: 120px; /* More padding to clear the navbar */
+            padding-bottom: 70px; /* More padding to clear the footer */
+            flex: 1;
+            overflow-y: auto;
+        }
+        .changelog-section {
+            padding: 20px;
+            border-bottom: 1px solid #7289da;
+            margin-bottom: 20px;
+            border-radius: 8px;
+            transition: background-color 0.3s ease;
+        }
+        .changelog-section:hover {
+            background-color: #32353b;
+        }
+        .changelog-section h2 {
+            font-size: 2em;
+            color: #008cff;
+            margin-bottom: 10px;
+        }
+        .changelog-section p {
+            font-size: 1.2em;
+            line-height: 1.6em;
+            margin: 5px 0;
+        }
+        .changelog-section .highlight {
+            color: rgb(0, 174, 255);
+            font-weight: bold;
+        }
+        .changelog-section:nth-child(odd) {
+            background-color: #282b30;
+        }
+        .changelog-section:nth-child(even) {
+            background-color: #202225;
+        }
+        .footer {
+            width: 100%;
+            text-align: center;
+            padding: 20px;
+            background-color: #23272a;
+            color: #fff;
+            font-weight: 500;
+            position: fixed;
+            bottom: 0;
+            z-index: 1000;
+        }
+        /* Custom scrollbar */
+        ::-webkit-scrollbar {
+            width: 12px;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #008cff;
+            border-radius: 6px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #005fbf;
+        }
+        ::-webkit-scrollbar-track {
+            background: #23272a;
+            border-radius: 6px;
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <div class="logo">
+            <a href="index.html"><img src="https://images-ext-1.discordapp.net/external/mAMhf4NNdtSN8ACPrNo256kbvUL_GL5Sl20e4_Djs-A/%3Fsize%3D256/https/cdn.discordapp.com/avatars/1187965551197294602/58e0b9d31448f2d7b96507187358c1a7.png?format=webp&quality=lossless" alt="Central Logo"></a>
+        </div>
+        <div class="links">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="commands.html">Commands</a>
+            <a href="changelog.html">Changelog</a>
+            <a href="https://discord.gg/centralbot">Support</a>
+        </div>
+    </div>
+
+    <div class="changelog-container">
+        <div class="changelog-section">
+            <h2>Version 1.9.6 (Minor) <span class="highlight">CURRENT</span></h2>
+            <p>Revamped <span class="highlight">/help</span></p>
+            <p>Added missing commands, and removed deprecated ones!</p>
+            <p>Revamped Command Page</p>
+        </div>
+        <div class="changelog-section">
+            <h2>Version 1.9.5 (Minor)</h2>
+            <p>Added the ability to run <span class="highlight">MULTIPLE</span> giveaways at once!</p>
+            <p>Bug fixes</p>
+        </div>
+        <div class="changelog-section">
+            <h2>Version 1.9.4 (Minor)</h2>
+            <p>Added a Ban Appeal Blacklist role to the configuration (OPTIONAL). 🎉</p>
+            <p>This will prevent people with the role from creating ban appeals in case of abuse.</p>
+            <p>Fixed a bug causing all Direct Messages for session starts to fail, now users who vote will be directly messaged correctly on session start.</p>
+        </div>
+        <div class="changelog-section">
+            <h2>Version 1.9.3 (Minor)</h2>
+            <p>Added <span class="highlight">/loa manage</span> 🎉 (Suggested by @dubs)</p>
+            <p>Manage / cancel your LOA from one panel!</p>
+            <p>Added the long awaited "Refresh" button to the <span class="highlight">/erlc statistics</span> command (Suggested by @kvvller and @klgzbhgghl)</p>
+        </div>
+        <div class="changelog-section">
+            <h2>Version 1.9.2 (Minor)</h2>
+            <p>Fixed a bug causing LOA's to not end properly. This was carried over from a development test of the system, and should now work as intended.</p>
+            <p>Made the bot attempt to DM the user when their LOA concludes.</p>
+        </div>
+        <div class="changelog-section">
+            <h2>Version 1.9.1 (Minor)</h2>
+            <p>Added Custom Pinging to Ban Appeals 🎉 (Does require reconfiguration, but it is optional.)</p>
+            <p>Website navbar bug fixes.</p>
+            <p>Await issue bug fixes.</p>
+            <p>And other, non important bug fixes.</p>
+        </div>
+        <div class="changelog-section">
+            <h2>Version 1.9.0 (Major)</h2>
+            <p>🔔 ⠀New Additions</p>
+            <p>Ban appeals - preset questions (Configuration needed!)</p>
+            <p>Request embed customization (Configuration needed!)</p>
+            <p>Added LOA's! 🎉 - Needs configuration, and allows people to request an LOA!</p>
+            <p>Added new blacklisting feature to further enforce Central's Terms of Service. (Section 6 ~ Termination)</p>
+            <p>This is a Central Staff only feature, allowing our staff to "Terminate" someone's access to bot commands / systems.</p>
+            <p>⭐ ⠀ Changes</p>
+            <p>If someone voted for a session and the session begins, those who voted will be directly messaged!</p>
+            <p>Added a Live Player Count to session start embeds on servers that have the API package and have enabled this feature. (Updated every 3 minutes)</p>
+            <p>Revamped Website About Page.</p>
+            <p>Made changes to the Command Page's navigation side-bar</p>
+            <p>Made changes to the Terms of Service Page's navigation side-bar</p>
+            <p>Added a scroll back to top button on all pages that you can scroll down on.</p>
+            <p>🐛 ⠀ Bug Fixes</p>
+            <p>Fixed voters message appearing blank when no one voted, made it not send at all.</p>
+            <p>And other, non important bug fixes.</p>
+        </div>
+        <div class="changelog-section">
+            <h2>Version 1.8.5 (Minor)</h2>
+            <p>Addition of Website changelog dating back to 1.7.0 ~ Check Discord for further versions!</p>
+            <p>Additional Bug Fixes.</p>
+        </div>
+        <div class="changelog-section">
+            <h2>Version 1.8.4 (Minor)</h2>
+            <p>Fixed a rolled back file issue in 1.8.3 causing custom welcome messages to not render correctly.</p>
+            <p>Added {user} tag to custom welcome messages.</p>
+        </div>
+        <div class="changelog-section">
+            <h2>Version 1.8.3 (Minor)</h2>
+            <p>Updates:</p>
+            <p>Updated <span class="highlight">/help</span> with new commands from 1.8.0</p>
+            <p>Refreshed website logos, left background the same, as an homage to the old logo.</p>
+            <p>Bug Fixes:</p>
+            <p>Fixed <span class="highlight">-whois</span> command so that instead of showing your profile when no user was found, it now just says no user was found.</p>
+            <p>Added failsafes to <span class="highlight">-purge</span> command spam.</p>
+        </div>
+        <div class="changelog-section">
+            <h2>Version 1.8.2 (Minor)</h2>
+            <p>Due to some misconceptions about the "Linking" channels configurations, the text around them have been changed to "Mention channels"</p>
+            <p>This insinuates that instead of sending a link to a channel (Not what you were supposed to do), you send a mention to a channel. Ex: #channel-name</p>
+        </div>
+        <div class="changelog-section">
+            <h2>Version 1.8.1 (Minor)</h2>
+            <p>Fixed an await error showing everyone having premium in the whois & <span class="highlight">-w</span> commands</p>
+            <p>Fixed a similar await error showing that no one has premium in the <span class="highlight">-profile</span> command.</p>
+            <p>Note: This was a "graphical" glitch, and had no effect on the actual premium databases.</p>
+        </div>
+        <div class="changelog-section">
+            <h2>Version 1.8.0 (Major)</h2>
+            <p>🔔 ⠀New Additions</p>
+            <p>Added premium!</p>
+            <p>Added <span class="highlight">/infraction edit {user} {infraction id}</span> (Suggested by: teamsghtnth6)</p>
+            <p>Added <span class="highlight">/request {online, moderation, administration, custom}</span> - Staff Request (Configuration needed!)</p>
+            <p>Added <span class="highlight">-purge {number}</span> (Manage Messages permission needed!)</p>
+            <p>Added ability to change the bots prefix (Configuration needed!) (Suggested by: saadalhajraf)</p>
+            <p>💎 ⠀Premium Additions</p>
+            <p>Customization over welcome message (Configuration needed!)</p>
+            <p>Customization over infractions embed (Configuration needed!)</p>
+            <p>Custom <span class="highlight">/request</span> types (Configuration needed!)</p>
+            <p>Additional support server abilities</p>
+            <p>Get started with <span class="highlight">/premium</span>!</p>
+            <p>⭐ ⠀ Changes</p>
+            <p>Added official beta testing. Hand selected at the moment.</p>
+            <p>Gave Central a new look, enjoy the new logo!</p>
+        </div>
+        <div class="changelog-section">
+            <h2>Version 1.7.1 (Minor)</h2>
+            <p>In preparation for the big update coming soon™️, we have corrected some bugs that have become apparent:</p>
+            <p>Session vote not pinging <span class="highlight">@here</span> even if the configuration was set to "yes"</p>
+            <p>Bot restarting unexpectedly with slash command usage</p>
+            <p>Bot crashing when help command was run (caused by a deleted emoji :/ )</p>
+            <p>And more, unimportant fixes.</p>
+        </div>
+        <div class="changelog-section">
+            <h2>Version 1.7.0 (Major)</h2>
+            <p>Added Custom Embeds! 🎉</p>
+            <p>Can be configured in <span class="highlight">/config</span></p>
+            <p>Added Suggestions 🎉</p>
+            <p>Must be configured in <span class="highlight">/config</span></p>
+            <p>Enhanced infraction and promotion embeds</p>
+            <p>Added reaction logs to action log system</p>
+            <p>And major bug fixes!</p>
+            <p>Further Versions are listed in the Discord's Update Channel.</p>
+        </div>
+        <!-- Add additional changelog sections here -->
+    </div>
+
+    <div class="footer">
+        &copy; 2024 Your Company. All rights reserved.
+    </div>
+</body>
+</html>
